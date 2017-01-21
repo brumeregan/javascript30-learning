@@ -18,7 +18,11 @@ function ready() {
     }
 
     const keys = document.querySelectorAll('.key');
-    keys.forEach(key => key.addEventListener('transitionend', removeTransformEffect));
+    // keys.forEach(key => key.addEventListener('transitionend', removeTransformEffect));
+
+    for(let i = 0; i < keys.length; i++) {
+    	keys[i].addEventListener('transitionend', removeTransformEffect);
+    }
 
     window.addEventListener('keydown', playingSound);
 }
