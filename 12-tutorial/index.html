@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detect siquence  of kyes</title>
+    <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+
+
+<script>
+
+    let str = 'test';
+    var passed = [];
+    window.addEventListener('keyup', e => {
+        passed.push(e.key);
+
+        passed.splice(-str.length - 1, passed.length - str.length);
+
+        if(passed.join('').includes(str)) {
+            cornify_add();
+        }
+    });
+</script>
+
+</body>
+</html>
